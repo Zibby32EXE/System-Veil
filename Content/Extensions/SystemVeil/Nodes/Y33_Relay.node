@@ -1,0 +1,44 @@
+{
+  "name": "Y-33 Relay",
+  "type": "Relay",
+  "ip": "192.168.1.33",
+  "ports": [22, 80, 443, 8080],
+  "securityLevel": 15,
+  "firewallStrength": 25,
+  "ram": 1024,
+  "cpu": 2,
+  "adminPassword": "VEIL_ACCESS_7733",
+  "files": [
+    {
+      "name": "y33_relay.log",
+      "size": 860,
+      "path": "Data/y33_relay.log",
+      "readOnly": false,
+      "hidden": false
+    },
+    {
+      "name": "relay_config.cfg",
+      "size": 2048,
+      "content": "[RELAY CONFIG]\nPort=8080\nEncryption=VEIL_PROTOCOL\nMaxConnections=100\nTimeout=30",
+      "readOnly": true,
+      "hidden": false
+    }
+  ],
+  "processes": [
+    {
+      "name": "relay_daemon",
+      "cpuUsage": 15,
+      "ramUsage": 256,
+      "essential": true
+    },
+    {
+      "name": "encryption_service",
+      "cpuUsage": 10,
+      "ramUsage": 128,
+      "essential": true
+    }
+  ],
+  "description": "A mysterious relay node used by VEIL for secure data transmission.",
+  "discovered": false,
+  "tags": ["VEIL", "Relay", "Mysterious"]
+}

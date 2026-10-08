@@ -1,0 +1,33 @@
+{
+  "name": "VEIL DROPBOX",
+  "type": "Server",
+  "ip": "10.0.0.1",
+  "ports": [21, 22, 8000],
+  "securityLevel": 5,
+  "firewallStrength": 5,
+  "ram": 2048,
+  "cpu": 4,
+  "adminPassword": "DROPBOX_UPLOAD",
+  "files": [
+    {
+      "name": "upload",
+      "size": 0,
+      "path": "",
+      "readOnly": false,
+      "hidden": false,
+      "isDirectory": true
+    }
+  ],
+  "processes": [
+    {
+      "name": "upload_server_daemon",
+      "cpuUsage": 5,
+      "ramUsage": 128,
+      "essential": true,
+      "port": 8000
+    }
+  ],
+  "description": "VEIL's secure dropbox server for receiving sensitive files. No authentication required.",
+  "discovered": false,
+  "tags": ["VEIL", "Dropbox", "Upload"]
+}

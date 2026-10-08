@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HacknetExtension>
+  <Name>System Veil</Name>
+  <Author>Zibby32EXE</Author>
+  <Version>1.0.0</Version>
+  <Description>A mysterious extension featuring VEIL and three challenging missions.</Description>
+  
+  <Content>
+    <Nodes>
+      <NodeFile>Nodes/Y33_Relay.node</NodeFile>
+      <NodeFile>Nodes/F0xtr0t_PC.node</NodeFile>
+      <NodeFile>Nodes/PortHack_Heart_Remnants.node</NodeFile>
+      <NodeFile>Nodes/VEIL_DROPBOX.node</NodeFile>
+    </Nodes>
+    
+    <Servers>
+      <ServerFile>Servers/VEIL_DROPBOX.server</ServerFile>
+    </Servers>
+    
+    <Missions>
+      <MissionFile>Missions/VEIL_Mission1.mission</MissionFile>
+      <MissionFile>Missions/VEIL_Mission2.mission</MissionFile>
+      <MissionFile>Missions/VEIL_Mission3.mission</MissionFile>
+    </Missions>
+    
+    <Scripts>
+      <ScriptFile>Scripts/VEIL_Setup.script</ScriptFile>
+    </Scripts>
+    
+    <Data>
+      <DataFile>Data/y33_relay.log</DataFile>
+    </Data>
+  </Content>
+  
+  <Dependencies>
+    <GameVersion>1.0</GameVersion>
+  </Dependencies>
+</HacknetExtension>

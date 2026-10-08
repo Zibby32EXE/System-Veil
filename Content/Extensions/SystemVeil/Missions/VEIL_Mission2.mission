@@ -1,0 +1,52 @@
+{
+  "name": "VEIL: System Purge",
+  "description": "VEIL requires the deletion of x-server.sys from F0xtr0t's PC to prevent data leakage.",
+  "author": "VEIL",
+  "difficulty": 3,
+  "reward": 7500,
+  "reputation": 150,
+  
+  "briefing": "Agent, F0xtr0t's PC contains a file called x-server.sys that poses a significant security risk. I need you to connect to his machine at 172.16.0.40, bypass his defenses, and delete that file. Be careful - he's got a strong firewall and security measures in place. The file is marked for deletion by VEIL directive.",
+  
+  "objectives": [
+    {
+      "id": "find_f0xtr0t_pc",
+      "description": "Locate and connect to F0xtr0t's PC (172.16.0.40)",
+      "type": "connect",
+      "target": "F0xtr0t's PC",
+      "completed": false
+    },
+    {
+      "id": "bypass_firewall",
+      "description": "Bypass or disable the firewall on F0xtr0t's PC",
+      "type": "firewall",
+      "target": "F0xtr0t's PC",
+      "completed": false
+    },
+    {
+      "id": "locate_xserver",
+      "description": "Locate the x-server.sys file",
+      "type": "locate",
+      "target": "x-server.sys",
+      "completed": false
+    },
+    {
+      "id": "delete_xserver",
+      "description": "Delete x-server.sys from F0xtr0t's PC",
+      "type": "delete",
+      "target": "x-server.sys",
+      "completed": false
+    }
+  ],
+  
+  "completionCondition": "delete_xserver",
+  "failureCondition": "",
+  
+  "hints": [
+    "F0xtr0t's PC has a known weakness on port 1337.",
+    "The admin password might be related to his username.",
+    "Check the readme.txt file for clues about x-server.sys."
+  ],
+  
+  "tags": ["VEIL", "Deletion", "F0xtr0t", "Purge"]
+}

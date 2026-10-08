@@ -1,0 +1,53 @@
+{
+  "name": "VEIL: Data Retrieval",
+  "description": "VEIL has tasked you with retrieving the relay log from Y-33 Relay and uploading it to their secure dropbox server.",
+  "author": "VEIL",
+  "difficulty": 2,
+  "reward": 5000,
+  "reputation": 100,
+  
+  "briefing": "Agent, I need you to retrieve a critical file from the Y-33 Relay. The file is called y33_relay.log and contains important transmission data. Once you have it, upload it to my DROPBOX server at 10.0.0.1 on port 8000. The upload server doesn't require authentication. Time is of the essence.",
+  
+  "objectives": [
+    {
+      "id": "find_y33_relay",
+      "description": "Locate and connect to Y-33 Relay (192.168.1.33)",
+      "type": "connect",
+      "target": "Y-33 Relay",
+      "completed": false
+    },
+    {
+      "id": "download_log",
+      "description": "Download y33_relay.log from Y-33 Relay",
+      "type": "download",
+      "target": "y33_relay.log",
+      "completed": false
+    },
+    {
+      "id": "connect_dropbox",
+      "description": "Connect to VEIL DROPBOX server (10.0.0.1)",
+      "type": "connect",
+      "target": "VEIL DROPBOX",
+      "completed": false
+    },
+    {
+      "id": "upload_log",
+      "description": "Upload y33_relay.log to VEIL DROPBOX on port 8000",
+      "type": "upload",
+      "target": "y33_relay.log",
+      "port": 8000,
+      "completed": false
+    }
+  ],
+  
+  "completionCondition": "upload_log",
+  "failureCondition": "",
+  
+  "hints": [
+    "The Y-33 Relay has a weak firewall on port 8080.",
+    "Use the upload command on port 8000 for the DROPBOX server.",
+    "The admin password for Y-33 Relay might be related to its name."
+  ],
+  
+  "tags": ["VEIL", "Retrieval", "Upload"]
+}

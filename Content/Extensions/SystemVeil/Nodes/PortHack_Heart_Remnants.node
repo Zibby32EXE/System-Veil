@@ -1,0 +1,54 @@
+{
+  "name": "PortHack.Heart Remnants",
+  "type": "Server",
+  "ip": "192.168.0.100",
+  "ports": [22, 80, 443, 9000],
+  "securityLevel": 25,
+  "firewallStrength": 40,
+  "ram": 8192,
+  "cpu": 16,
+  "adminPassword": "HEART_RESTART",
+  "files": [
+    {
+      "name": "porthack_heart.exe",
+      "size": 8192,
+      "content": "[PORT HACK HEART]\nVersion: 3.1\nStatus: OFFLINE\n\nLast shutdown: 2024-10-08 10:00:00\nRestart required\n\nVEIL DIRECTIVE: RESTART_ME",
+      "readOnly": false,
+      "hidden": false,
+      "executable": true
+    },
+    {
+      "name": "heart_config.cfg",
+      "size": 2048,
+      "content": "[HEART CONFIG]\nPort=9000\nMaxConnections=200\nEncryption=AES-256\n\n[RESTART]\nAutoRestart=false\nManualOverride=true",
+      "readOnly": false,
+      "hidden": false
+    },
+    {
+      "name": "restart_script.sh",
+      "size": 512,
+      "content": "#!/bin/sh\necho "Restarting PortHack.Heart..."\n./porthack_heart.exe --restart\necho "Restart complete"",
+      "readOnly": false,
+      "hidden": false,
+      "executable": true
+    },
+    {
+      "name": "status.log",
+      "size": 1024,
+      "content": "[STATUS LOG]\n2024-10-08 10:00:00 - System shutdown by unknown entity\n2024-10-08 10:00:01 - All connections terminated\n2024-10-08 10:00:02 - Heart stopped\n\nAwaiting restart command...",
+      "readOnly": false,
+      "hidden": false
+    }
+  ],
+  "processes": [
+    {
+      "name": "heart_monitor",
+      "cpuUsage": 5,
+      "ramUsage": 128,
+      "essential": false
+    }
+  ],
+  "description": "The remnants of PortHack.Heart server that needs to be restarted as per VEIL's directive.",
+  "discovered": false,
+  "tags": ["VEIL", "PortHack", "Heart", "Restart"]
+}

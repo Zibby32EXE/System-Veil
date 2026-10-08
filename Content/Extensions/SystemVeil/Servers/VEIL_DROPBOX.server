@@ -1,0 +1,42 @@
+{
+  "name": "VEIL DROPBOX",
+  "type": "FTP",
+  "ip": "10.0.0.1",
+  "ports": [21, 22, 8000],
+  "securityLevel": 5,
+  "firewallStrength": 5,
+  "ram": 2048,
+  "cpu": 4,
+  "adminPassword": "DROPBOX_UPLOAD",
+  "allowAnonymousUpload": true,
+  "files": [
+    {
+      "name": "upload_daemon",
+      "size": 512,
+      "content": "#!/bin/veil\nUPLOAD_SERVER=10.0.0.1\nPORT=8000\nAUTH_REQUIRED=false\nLOG_UPLOADS=true",
+      "readOnly": true,
+      "hidden": true,
+      "executable": true
+    },
+    {
+      "name": "upload_log.txt",
+      "size": 1024,
+      "content": "[UPLOAD LOG]\nServer: VEIL DROPBOX\nPort: 8000\nStatus: READY\n\nWaiting for y33_relay.log...",
+      "readOnly": false,
+      "hidden": false
+    }
+  ],
+  "processes": [
+    {
+      "name": "upload_server",
+      "cpuUsage": 5,
+      "ramUsage": 128,
+      "essential": true,
+      "port": 8000,
+      "protocol": "VEIL_UPLOAD"
+    }
+  ],
+  "description": "VEIL's secure dropbox server for receiving sensitive files. No authentication required.",
+  "discovered": false,
+  "tags": ["VEIL", "Dropbox", "Upload"]
+}

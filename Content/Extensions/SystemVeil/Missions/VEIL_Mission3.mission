@@ -1,0 +1,54 @@
+{
+  "name": "VEIL: Heart Restart",
+  "description": "VEIL's final directive: restart the PortHack.Heart remnants to restore critical infrastructure.",
+  "author": "VEIL",
+  "difficulty": 4,
+  "reward": 10000,
+  "reputation": 200,
+  
+  "briefing": "Agent, this is the final task. The PortHack.Heart server at 192.168.0.100 has been offline since an unexpected shutdown. I need you to connect to the remnants, access the control systems, and restart the heart. The server has the porthack_heart.exe file that needs to be executed with restart parameters. This is critical for our operations.",
+  
+  "objectives": [
+    {
+      "id": "find_porthack_heart",
+      "description": "Locate and connect to PortHack.Heart Remnants (192.168.0.100)",
+      "type": "connect",
+      "target": "PortHack.Heart Remnants",
+      "completed": false
+    },
+    {
+      "id": "bypass_heart_defenses",
+      "description": "Bypass the strong firewall and security on PortHack.Heart",
+      "type": "firewall",
+      "target": "PortHack.Heart Remnants",
+      "completed": false
+    },
+    {
+      "id": "access_restart_script",
+      "description": "Locate the restart_script.sh or porthack_heart.exe file",
+      "type": "locate",
+      "target": "restart_script.sh",
+      "completed": false
+    },
+    {
+      "id": "restart_heart",
+      "description": "Execute the restart command for PortHack.Heart",
+      "type": "execute",
+      "target": "porthack_heart.exe",
+      "parameters": "--restart",
+      "completed": false
+    }
+  ],
+  
+  "completionCondition": "restart_heart",
+  "failureCondition": "",
+  
+  "hints": [
+    "The admin password might be related to the restart directive.",
+    "Port 9000 is used by the heart monitoring system.",
+    "Check the heart_config.cfg for restart parameters.",
+    "The restart_script.sh can be executed directly."
+  ],
+  
+  "tags": ["VEIL", "Restart", "PortHack", "Heart", "Final"]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "F0xtr0t's PC",
+  "type": "Personal",
+  "ip": "172.16.0.40",
+  "ports": [22, 1337, 8080],
+  "securityLevel": 20,
+  "firewallStrength": 30,
+  "ram": 4096,
+  "cpu": 8,
+  "adminPassword": "F0xtr0t_2024",
+  "files": [
+    {
+      "name": "x-server.sys",
+      "size": 4096,
+      "content": "[X-SERVER SYSTEM]\nVersion: 1.0\nStatus: ACTIVE\n\nWARNING: This file contains critical system data.\nDeletion may cause system instability.\n\nVEIL MARKER: DELETE_ME",
+      "readOnly": false,
+      "hidden": false,
+      "deletable": true
+    },
+    {
+      "name": "config.ini",
+      "size": 1024,
+      "content": "[CONFIG]\nServerName=F0xtr0t_PC\nPort=1337\nMaxConnections=50\n\n[X-SERVER]\nEnabled=true\nPath=./x-server.sys",
+      "readOnly": false,
+      "hidden": false
+    },
+    {
+      "name": "readme.txt",
+      "size": 512,
+      "content": "F0xtr0t's Personal Computer\nDo not touch x-server.sys\n- VEIL",
+      "readOnly": true,
+      "hidden": false
+    }
+  ],
+  "processes": [
+    {
+      "name": "x-server",
+      "cpuUsage": 25,
+      "ramUsage": 512,
+      "essential": false,
+      "port": 1337
+    },
+    {
+      "name": "firewall",
+      "cpuUsage": 10,
+      "ramUsage": 256,
+      "essential": true
+    }
+  ],
+  "description": "F0xtr0t's personal computer containing the x-server.sys file that VEIL wants deleted.",
+  "discovered": false,
+  "tags": ["VEIL", "F0xtr0t", "Target"]
+}

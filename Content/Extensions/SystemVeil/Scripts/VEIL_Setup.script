@@ -1,0 +1,60 @@
+// VEIL Extension Setup Script
+// This script initializes the System Veil extension and makes VEIL available as a contractor
+
+// Register VEIL as a contractor
+registerContractor({
+    name: "VEIL",
+    description: "A mysterious entity with critical missions. Little is known about their true identity or motives.",
+    icon: "question_mark",
+    color: "#8B008B", // Dark purple
+    reputation: 0,
+    missions: [
+        "VEIL: Data Retrieval",
+        "VEIL: System Purge", 
+        "VEIL: Heart Restart"
+    ]
+});
+
+// Add VEIL's nodes to the network
+addNode({
+    name: "Y-33 Relay",
+    ip: "192.168.1.33",
+    type: "Relay",
+    discovered: false,
+    hidden: true
+});
+
+addNode({
+    name: "VEIL DROPBOX",
+    ip: "10.0.0.1",
+    type: "Server",
+    discovered: false,
+    hidden: true
+});
+
+addNode({
+    name: "F0xtr0t's PC",
+    ip: "172.16.0.40",
+    type: "Personal",
+    discovered: false,
+    hidden: true
+});
+
+addNode({
+    name: "PortHack.Heart Remnants",
+    ip: "192.168.0.100",
+    type: "Server",
+    discovered: false,
+    hidden: true
+});
+
+// VEIL's introduction message
+addMail({
+    from: "VEIL",
+    subject: "Greetings, Operator",
+    body: "I have been watching your work. You have skills that could be useful to me.\n\nI have three critical tasks that require your attention:\n\n1. Retrieve a relay log from Y-33 Relay and upload it to my DROPBOX\n2. Delete x-server.sys from F0xtr0t's PC\n3. Restart the PortHack.Heart server\n\nAccept my missions through the contractor system. Time is not on our side.\n\n- VEIL",
+    read: false
+});
+
+// Setup complete
+log("System Veil extension initialized. VEIL contractor and missions are now available.");
